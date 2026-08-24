@@ -1,6 +1,6 @@
 # NexusAI — Multi-Agent SaaS Platform
 
-> **2,000 days · 20 skills · Day 1 = 24 Aug 2026 · Ends 13 Feb 2032**
+> **2,000 days · 20 skills · Day 1 = 25 Aug 2026 · Ends 14 Feb 2032**
 >
 > Built one commit per day. Every skill learned goes directly into this platform.
 
@@ -14,26 +14,26 @@ This repo has **two completely separate sections** that never mix:
 nexusai/
 │
 ├── practice/                  ← SECTION 1: Skill practice workspace
-│   ├── 01-python/             (Days   1–100  · 24 Aug 2026 – 1 Dec 2026)
-│   ├── 02-fastapi/            (Days 101–200  · 2 Dec 2026 – 11 Mar 2027)
-│   ├── 03-agentic-ai/         (Days 201–300  · 12 Mar 2027 – 19 Jun 2027)
-│   ├── 04-javascript/         (Days 301–400  · 20 Jun 2027 – 27 Sep 2027)
-│   ├── 05-typescript/         (Days 401–500  · 28 Sep 2027 – 5 Jan 2028)
-│   ├── 06-react-js/           (Days 501–600  · 6 Jan 2028 – 14 Apr 2028)
-│   ├── 07-next-js/            (Days 601–700  · 15 Apr 2028 – 23 Jul 2028)
-│   ├── 08-react-native/       (Days 701–800  · 24 Jul 2028 – 31 Oct 2028)
-│   ├── 09-databases/          (Days 801–900  · 1 Nov 2028 – 8 Feb 2029)
-│   ├── 10-express-js/         (Days 901–1000 · 9 Feb 2029 – 18 May 2029)
-│   ├── 11-j2se/               (Days 1001–1100 · 19 May 2029 – 26 Aug 2029)
-│   ├── 12-jpa/                (Days 1101–1200 · 27 Aug 2029 – 4 Dec 2029)
-│   ├── 13-spring-boot/        (Days 1201–1300 · 5 Dec 2029 – 14 Mar 2030)
-│   ├── 14-microservices/      (Days 1301–1400 · 15 Mar 2030 – 22 Jun 2030)
-│   ├── 15-automation-testing/ (Days 1401–1500 · 23 Jun 2030 – 30 Sep 2030)
-│   ├── 16-devops/             (Days 1501–1600 · 1 Oct 2030 – 8 Jan 2031)
-│   ├── 17-aws/                (Days 1601–1700 · 9 Jan 2031 – 18 Apr 2031)
-│   ├── 18-sre/                (Days 1701–1800 · 19 Apr 2031 – 27 Jul 2031)
-│   ├── 19-system-design/      (Days 1801–1900 · 28 Jul 2031 – 4 Nov 2031)
-│   └── 20-dsa/                (Days 1901–2000 · 5 Nov 2031 – 13 Feb 2032)
+│   ├── 01-python/             (Days   1–100  · 25 Aug 2026 – 2 Dec 2026)
+│   ├── 02-fastapi/            (Days 101–200  · 3 Dec 2026 – 12 Mar 2027)
+│   ├── 03-agentic-ai/         (Days 201–300  · 13 Mar 2027 – 20 Jun 2027)
+│   ├── 04-javascript/         (Days 301–400  · 21 Jun 2027 – 28 Sep 2027)
+│   ├── 05-typescript/         (Days 401–500  · 29 Sep 2027 – 6 Jan 2028)
+│   ├── 06-react-js/           (Days 501–600  · 7 Jan 2028 – 15 Apr 2028)
+│   ├── 07-next-js/            (Days 601–700  · 16 Apr 2028 – 24 Jul 2028)
+│   ├── 08-react-native/       (Days 701–800  · 25 Jul 2028 – 1 Nov 2028)
+│   ├── 09-databases/          (Days 801–900  · 2 Nov 2028 – 9 Feb 2029)
+│   ├── 10-express-js/         (Days 901–1000 · 10 Feb 2029 – 19 May 2029)
+│   ├── 11-j2se/               (Days 1001–1100 · 20 May 2029 – 27 Aug 2029)
+│   ├── 12-jpa/                (Days 1101–1200 · 28 Aug 2029 – 5 Dec 2029)
+│   ├── 13-spring-boot/        (Days 1201–1300 · 6 Dec 2029 – 15 Mar 2030)
+│   ├── 14-microservices/      (Days 1301–1400 · 16 Mar 2030 – 23 Jun 2030)
+│   ├── 15-automation-testing/ (Days 1401–1500 · 24 Jun 2030 – 1 Oct 2030)
+│   ├── 16-devops/             (Days 1501–1600 · 2 Oct 2030 – 9 Jan 2031)
+│   ├── 17-aws/                (Days 1601–1700 · 10 Jan 2031 – 19 Apr 2031)
+│   ├── 18-sre/                (Days 1701–1800 · 20 Apr 2031 – 28 Jul 2031)
+│   ├── 19-system-design/      (Days 1801–1900 · 29 Jul 2031 – 5 Nov 2031)
+│   └── 20-dsa/                (Days 1901–2000 · 6 Nov 2031 – 14 Feb 2032)
 │
 └── project/                   ← SECTION 2: Actual NexusAI platform
     ├── agent-api/             FastAPI — Agent Orchestration API
@@ -227,4 +227,4 @@ AWS Account
 
 ---
 
-Built by [Sumit Rawal](https://github.com/sumitrawaltiger) · Day 0: 23 Aug 2026
+Built by [Sumit Rawal](https://github.com/sumitrawaltiger) · Day 0: 24 Aug 2026
