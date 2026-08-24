@@ -25,8 +25,8 @@ nexusai/
 │   ├── 09-databases/          (Days 801–900  · 2 Nov 2028 – 9 Feb 2029)
 │   ├── 10-express-js/         (Days 901–1000 · 10 Feb 2029 – 19 May 2029)
 │   ├── 11-j2se/               (Days 1001–1100 · 20 May 2029 – 27 Aug 2029)
-│   ├── 12-jpa/                (Days 1101–1200 · 28 Aug 2029 – 5 Dec 2029)
-│   ├── 13-spring-boot/        (Days 1201–1300 · 6 Dec 2029 – 15 Mar 2030)
+│   ├── 12-spring-boot/        (Days 1101–1200 · 28 Aug 2029 – 5 Dec 2029)
+│   ├── 13-kafka/              (Days 1201–1300 · 6 Dec 2029 – 15 Mar 2030)
 │   ├── 14-microservices/      (Days 1301–1400 · 16 Mar 2030 – 23 Jun 2030)
 │   ├── 15-automation-testing/ (Days 1401–1500 · 24 Jun 2030 – 1 Oct 2030)
 │   ├── 16-devops/             (Days 1501–1600 · 2 Oct 2030 – 9 Jan 2031)
@@ -141,8 +141,9 @@ Each skill phase adds one production layer to `project/`. Nothing sits idle.
 | 8 | React Native | `mobile/` — voice-to-agent, push notifications, camera input |
 | 9 | Databases | `db/` — migrations, indexes, pgvector embeddings, Redis queues |
 | 10 | Express JS | `gateway/` — API gateway, rate limiting, webhook relay |
-| 11–13 | J2SE + JPA + Spring Boot | `java-backend/` — billing engine, user management, subscriptions |
-| 14 | Microservices | `java-backend/` split into 5 services + Kafka events |
+| 11–12 | J2SE + Spring Boot | `java-backend/` — billing engine, user management, subscriptions (Spring Data JPA + Hibernate included) |
+| 13 | Kafka | `java-backend/` — Kafka producers/consumers, event-driven billing events, Spring Kafka integration |
+| 14 | Microservices | `java-backend/` split into 5 services, CQRS + event sourcing on top of Kafka |
 | 15 | Automation Testing | `project/` — full test suite across all services |
 | 16 | DevOps | `infra/docker/` + `infra/ci/` — Dockerfiles, GitHub Actions pipelines |
 | 17 | AWS | `infra/helm/` — EKS deploy, RDS, ElastiCache, CloudFront, Route 53 |
