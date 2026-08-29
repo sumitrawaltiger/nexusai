@@ -1,0 +1,14 @@
+s='ABCBA'
+print(s.find("A"))
+print(s.rfind("B"))
+print(s.index("A"))
+print(s.rindex("B"))
+print(s.find('z'))
+print(s.find("B"))
+s='AB'
+print(s.find('B',3,8))
+s='ABCBA'
+print(s.index("B"))
+print(s.rindex("B"))
+print(s.index("Z"))
+print(s.rindex("Z"))
