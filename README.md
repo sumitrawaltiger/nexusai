@@ -1,6 +1,6 @@
 # NexusAI — Multi-Agent SaaS Platform
 
-> **2,000 days · 20 skills · Day 1 = 25 Aug 2026 · Ends 14 Feb 2032**
+> **2,008 days · 6 phases · Day 1 = 1 Sep 2026 · Ends 29 Feb 2032**
 >
 > Built one commit per day. Every skill learned goes directly into this platform.
 
@@ -13,70 +13,56 @@ This repo has **two completely separate sections** that never mix:
 ```
 nexusai/
 │
-├── practice/                  ← SECTION 1: Skill practice workspace
-│   ├── 01-python/             (Days   1–100  · 25 Aug 2026 – 2 Dec 2026)
-│   ├── 02-fastapi/            (Days 101–200  · 3 Dec 2026 – 12 Mar 2027)
-│   ├── 03-agentic-ai/         (Days 201–300  · 13 Mar 2027 – 20 Jun 2027)
-│   ├── 04-javascript/         (Days 301–400  · 21 Jun 2027 – 28 Sep 2027)
-│   ├── 05-typescript/         (Days 401–500  · 29 Sep 2027 – 6 Jan 2028)
-│   ├── 06-react-js/           (Days 501–600  · 7 Jan 2028 – 15 Apr 2028)
-│   ├── 07-next-js/            (Days 601–700  · 16 Apr 2028 – 24 Jul 2028)
-│   ├── 08-react-native/       (Days 701–800  · 25 Jul 2028 – 1 Nov 2028)
-│   ├── 09-databases/          (Days 801–900  · 2 Nov 2028 – 9 Feb 2029)
-│   ├── 10-express-js/         (Days 901–1000 · 10 Feb 2029 – 19 May 2029)
-│   ├── 11-j2se/               (Days 1001–1100 · 20 May 2029 – 27 Aug 2029)
-│   ├── 12-spring-boot/        (Days 1101–1200 · 28 Aug 2029 – 5 Dec 2029)
-│   ├── 13-kafka/              (Days 1201–1300 · 6 Dec 2029 – 15 Mar 2030)
-│   ├── 14-microservices/      (Days 1301–1400 · 16 Mar 2030 – 23 Jun 2030)
-│   ├── 15-automation-testing/ (Days 1401–1500 · 24 Jun 2030 – 1 Oct 2030)
-│   ├── 16-devops/             (Days 1501–1600 · 2 Oct 2030 – 9 Jan 2031)
-│   ├── 17-aws/                (Days 1601–1700 · 10 Jan 2031 – 19 Apr 2031)
-│   ├── 18-sre/                (Days 1701–1800 · 20 Apr 2031 – 28 Jul 2031)
-│   ├── 19-system-design/      (Days 1801–1900 · 29 Jul 2031 – 5 Nov 2031)
-│   └── 20-dsa/                (Days 1901–2000 · 6 Nov 2031 – 14 Feb 2032)
+├── practice/                    ← SECTION 1: Skill practice workspace
+│   ├── 01-agentic-ai/           (Days    1–181  · 1 Sep 2026 – 28 Feb 2027)
+│   ├── 02-typescript-stack/     (Days  182–731  · 1 Mar 2027 – 31 Aug 2028)
+│   ├── 03-java-stack/           (Days  732–1096 · 1 Sep 2028 – 31 Aug 2029)
+│   ├── 04-databases/            (Days 1097–1277 · 1 Sep 2029 – 28 Feb 2030)
+│   ├── 05-devops-cloud/         (Days 1278–1642 · 1 Mar 2030 – 28 Feb 2031)
+│   └── 06-interview-prep/       (Days 1643–2008 · 1 Mar 2031 – 29 Feb 2032)
 │
-└── project/                   ← SECTION 2: Actual NexusAI platform
-    ├── agent-api/             FastAPI — Agent Orchestration API
-    ├── agents/                LangChain · LangGraph · MCP agent library
-    ├── sdk/                   TypeScript SDK (npm install nexusai)
-    ├── dashboard/             React JS — web dashboard
-    ├── marketing/             Next JS — public site + docs
-    ├── mobile/                React Native — iOS + Android app
-    ├── gateway/               Express JS — API Gateway + webhooks
-    ├── java-backend/          Spring Boot — billing, users, subscriptions
-    ├── db/                    Migrations, schemas, seed scripts
+└── project/                     ← SECTION 2: Actual NexusAI platform
+    ├── agent-api/               FastAPI — Agent Orchestration API
+    ├── agents/                  LangChain · LangGraph · MCP agent library
+    ├── sdk/                     TypeScript SDK (npm install nexusai)
+    ├── dashboard/               React JS — web dashboard
+    ├── marketing/               Next JS — public site + docs
+    ├── mobile/                  React Native — iOS + Android app
+    ├── gateway/                 Express JS — API Gateway + webhooks
+    ├── java-backend/            Spring Boot — billing, users, subscriptions
+    ├── db/                      Migrations, schemas, seed scripts
     ├── infra/
-    │   ├── docker/            Dockerfiles for every service
-    │   ├── helm/              Kubernetes Helm charts
-    │   └── ci/                GitHub Actions workflows
-    └── docs/                  Architecture decisions (ADRs), diagrams
+    │   ├── docker/              Dockerfiles for every service
+    │   ├── helm/                Kubernetes Helm charts
+    │   └── ci/                  GitHub Actions workflows
+    └── docs/                    Architecture decisions (ADRs), diagrams
 ```
 
 ---
 
 ## Section 1 — Practice
 
-`practice/` is a **scratch workspace**. Raw exercises, tutorials, and experiments from each 100-day skill block. Code here is written to learn, not to ship. It can be messy. It's purely for building muscle memory.
+`practice/` is a **scratch workspace**. Raw exercises, tutorials, and experiments from each phase. Code here is written to learn, not to ship. It can be messy. It's purely for building muscle memory.
 
 **Rule:** nothing from `practice/` ever gets imported into `project/`. They are isolated.
 
-Each skill folder contains day-by-day work files, e.g.:
+Each phase folder contains day-by-day work files, e.g.:
 
 ```
-practice/01-python/
-├── day001-variables-loops.py
-├── day002-functions-scope.py
-├── day003-oop-classes.py
-├── day010-file-io.py
-├── day025-async-await.py
-└── day100-final-project/
+practice/01-agentic-ai/
+├── day001-python-syntax.py
+├── day002-oop-classes.py
+├── day010-fastapi-basics.py
+├── day025-langchain-intro.py
+├── day050-rag-pipeline.py
+└── day181-nexusai-agent-v1/
 ```
 
 ---
 
 ## Section 2 — Actual Project
 
-`project/` is the **real NexusAI platform** — production-grade code built skill by skill as each phase is completed. Every service here is deployable.
+`project/` is the **real NexusAI platform** — production-grade code built phase by phase as each skill is completed. Every service here is deployable.
 
 ### What is NexusAI?
 
@@ -128,28 +114,16 @@ Instead of one big model doing everything, NexusAI breaks business problems into
 
 ### How the Project Gets Built — Phase by Phase
 
-Each skill phase adds one production layer to `project/`. Nothing sits idle.
+Each phase adds one production layer to `project/`. Nothing sits idle.
 
-| Phase | Skill | What gets added to `project/` |
+| Phase | Period | What gets added to `project/` |
 |---|---|---|
-| 1 | Python | `agents/` core utilities — text chunking, token counting, prompt helpers |
-| 2 | FastAPI | `agent-api/` — REST + WebSocket API for agent execution |
-| 3 | Agentic AI | `agents/` — LangGraph multi-agent pipelines, RAG, MCP tool calling |
-| 4–5 | JS + TS | `sdk/` — typed npm package, CLI tool, webhook listener |
-| 6 | React JS | `dashboard/` — web UI with live agent run streaming |
-| 7 | Next JS | `marketing/` — landing page, pricing, MDX docs |
-| 8 | React Native | `mobile/` — voice-to-agent, push notifications, camera input |
-| 9 | Databases | `db/` — migrations, indexes, pgvector embeddings, Redis queues |
-| 10 | Express JS | `gateway/` — API gateway, rate limiting, webhook relay |
-| 11–12 | J2SE + Spring Boot | `java-backend/` — billing engine, user management, subscriptions (Spring Data JPA + Hibernate included) |
-| 13 | Kafka | `java-backend/` — Kafka producers/consumers, event-driven billing events, Spring Kafka integration |
-| 14 | Microservices | `java-backend/` split into 5 services, CQRS + event sourcing on top of Kafka |
-| 15 | Automation Testing | `project/` — full test suite across all services |
-| 16 | DevOps | `infra/docker/` + `infra/ci/` — Dockerfiles, GitHub Actions pipelines |
-| 17 | AWS | `infra/helm/` — EKS deploy, RDS, ElastiCache, CloudFront, Route 53 |
-| 18 | SRE | Prometheus + Grafana + SLOs + incident runbooks |
-| 19 | System Design | Architecture review, ADRs, capacity planning docs |
-| 20 | DSA | Performance optimisations applied across all services |
+| **P1 · Agentic AI** | Days 1–181 · Sep 2026 – Feb 2027 | `agents/` — LangGraph multi-agent pipelines, RAG, MCP tool calling, CrewAI crews · `agent-api/` — FastAPI REST + WebSocket execution API |
+| **P2 · TypeScript Full Stack** | Days 182–731 · Mar 2027 – Aug 2028 | `sdk/` — typed npm package + CLI · `dashboard/` — React web UI with live agent streaming · `marketing/` — Next.js landing page + MDX docs · `mobile/` — React Native iOS/Android app · `gateway/` — Express API gateway, rate limiting, webhooks |
+| **P3 · Java Stack** | Days 732–1096 · Sep 2028 – Aug 2029 | `java-backend/` — Spring Boot billing, user management, subscriptions · Kafka producers/consumers for event-driven billing · microservices split with CQRS + event sourcing |
+| **P4 · Databases** | Days 1097–1277 · Sep 2029 – Feb 2030 | `db/` — migrations, indexes, pgvector embeddings for long-term agent memory, Redis queues, MongoDB agent output schemas |
+| **P5 · DevOps + Cloud** | Days 1278–1642 · Mar 2030 – Feb 2031 | `infra/docker/` — Dockerfiles for every service · `infra/ci/` — GitHub Actions pipelines · `infra/helm/` — EKS deploy, RDS, ElastiCache, CloudFront, Route 53 · Prometheus + Grafana + SLOs |
+| **P6 · Interview Prep** | Days 1643–2008 · Mar 2031 – Feb 2032 | Performance optimisations (DSA applied across services) · Architecture review · ADRs · capacity planning docs |
 
 ---
 
@@ -159,7 +133,7 @@ Each skill phase adds one production layer to `project/`. Nothing sits idle.
 |---|---|---|
 | **PostgreSQL** | Users, teams, billing, subscriptions, run metadata | ACID guarantees for financial and user data |
 | **MongoDB** | Agent run outputs, prompt/response pairs | Variable-length JSON — schemaless fits agent outputs perfectly |
-| **Redis** | Session cache, rate limiting, Celery task queue, pub/sub | Sub-millisecond reads; async job queue for agent runs |
+| **Redis** | Session cache, rate limiting, task queue, pub/sub | Sub-millisecond reads; async job queue for agent runs |
 | **pgvector** | Long-term agent memory, RAG document embeddings | Vectors alongside relational data — no sync overhead |
 | **S3** | User uploads, audio files, agent output files | Cheap, durable blob storage |
 
@@ -193,12 +167,12 @@ AWS Account
 
 ### System Design & DSA
 
-**System Design** shapes every architectural decision throughout the 2,000 days:
+**System Design** shapes every architectural decision throughout all 2,008 days:
 
 | Decision | Concept |
 |---|---|
 | PostgreSQL + MongoDB + Redis instead of one DB | Polyglot persistence |
-| Async agent runs via Celery + Kafka | Message queues, backpressure |
+| Async agent runs via Kafka | Message queues, backpressure |
 | Dashboard streams agent output live | WebSockets, fan-out |
 | Billing service decoupled from agent service | Event-driven, eventual consistency |
 | EKS auto-scales agent pods | Stateless design, horizontal scaling |
@@ -217,15 +191,28 @@ AWS Account
 
 ---
 
-## Daily Commit Discipline
+## The 6-Phase Journey
 
-- **1 commit per day** from Day 1 — either to `practice/` or `project/` (or both)
-- **1 LeetCode problem per day** — 2,000 problems by Day 2,000 (13 Feb 2032)
-
-## Study Routine
-
-`4:00 AM wake → 4:00–4:30 AM fresh up → 4:30–7:30 AM IST study (3 hrs/day)`
+| Phase | Days | Duration | Period | Stack |
+|---|---|---|---|---|
+| P1 · Agentic AI | 1–181 | 6 months | 1 Sep 2026 – 28 Feb 2027 | Python · FastAPI · LangChain · LangGraph · RAG · MCP · CrewAI |
+| P2 · TypeScript Full Stack | 182–731 | 18 months | 1 Mar 2027 – 31 Aug 2028 | JS · TS · React · Next.js · React Native · Express · GraphQL · Playwright |
+| P3 · Java Stack | 732–1096 | 12 months | 1 Sep 2028 – 31 Aug 2029 | J2SE · Spring Boot · Kafka · Microservices · Automation Testing |
+| P4 · Databases | 1097–1277 | 6 months | 1 Sep 2029 – 28 Feb 2030 | PostgreSQL · MySQL · MongoDB · Redis · pgvector |
+| P5 · DevOps + Cloud | 1278–1642 | 12 months | 1 Mar 2030 – 28 Feb 2031 | Docker · Kubernetes CKA · AWS · CI/CD · SRE · GitOps |
+| P6 · Interview Prep | 1643–2008 | ~12 months | 1 Mar 2031 – 29 Feb 2032 | DSA Striver A2Z · NeetCode 150 · System Design HLD/LLD · 200+ mocks |
 
 ---
 
-Built by [Sumit Rawal](https://github.com/sumitrawaltiger) · Day 0: 24 Aug 2026
+## Daily Commit Discipline
+
+- **1 commit per day** from Day 1 — either to `practice/` or `project/` (or both)
+- **1 LeetCode problem per day** — 2,000 problems by Day 2,000 (21 Feb 2032)
+
+## Study Routine
+
+`4:00 AM wake → 4:30–5:00 AM meditation → 5:00–8:00 AM IST study (3 hrs/day, 7 days/week)`
+
+---
+
+Built by [Sumit Rawal](https://github.com/sumitrawaltiger) · Day 0: 31 Aug 2026
