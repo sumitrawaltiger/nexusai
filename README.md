@@ -100,7 +100,7 @@ Instead of one big model doing everything, NexusAI breaks business problems into
 │                              │  REST / WebSocket                  │
 │                    ┌─────────▼──────────┐                        │
 │                    │   API Gateway       │                        │
-│                    │   (Express JS)      │                        │
+│                    │   (NestJS)          │                        │
 │                    └─────────┬──────────┘                        │
 │         ┌────────────────────┼────────────────────┐              │
 │  ┌──────▼──────┐   ┌────────▼───────┐   ┌───────▼──────┐       │
@@ -120,6 +120,55 @@ Instead of one big model doing everything, NexusAI breaks business problems into
 │  │  AWS EKS · RDS · ElastiCache · MSK · CloudFront  │            │
 │  └──────────────────────────────────────────────────┘            │
 └─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### NestJS vs Spring Boot — Why Both?
+
+NexusAI uses both because they solve fundamentally different problems.
+
+| | NestJS (Skill 10) | Spring Boot (Skill 12) |
+|---|---|---|
+| **Layer** | API Gateway — public-facing | Business domain — internal |
+| **Language** | TypeScript | Java |
+| **Clients** | Dashboard · Mobile · SDK · Webhooks | NestJS gateway · Kafka consumers |
+| **Strengths** | Guards · GraphQL · WebSockets · CQRS reads · rate limiting | ORM · Billing · Compliance · JPA · Hibernate |
+| **Data** | Redis (cache, rate limit) · CQRS read models | PostgreSQL (ACID, financial data) |
+| **Kafka role** | Producer — publishes events | Consumer — processes billing/usage events |
+
+**NestJS handles the front door.**
+Every request from the dashboard, mobile app, and SDK enters through NestJS first:
+- **Guards** enforce JWT authentication and RBAC before any business logic runs
+- **Interceptors** handle request logging, response shaping, and rate limiting
+- **Pipes** validate all incoming payloads
+- **GraphQL** serves the dashboard's live agent streaming UI (code-first schema)
+- **WebSocket gateway** streams real-time agent run progress to connected clients
+- **Kafka producer** publishes `agent.run.requested` and `billing.event` messages
+
+**Spring Boot handles the back office.**
+Never directly public-facing — all access goes through the NestJS gateway:
+- Owns user accounts, teams, invitations, and subscription plans
+- Stripe billing integration: plan upgrades, invoice generation, webhook handling
+- Spring Data JPA + Hibernate for complex relational financial data (ACID guarantees)
+- **Kafka consumer** listens for billing and usage events to track costs and trigger billing cycles
+- Analytics service: aggregates agent run counts, token usage, and cost per team
+- Audit logs: immutable records for compliance
+
+**The request flow:**
+```
+Client (Dashboard · Mobile · SDK)
+    ↓  HTTPS
+NestJS API Gateway
+    ├── validates JWT (Guard) + checks rate limit (Redis)
+    ├── serves GraphQL / REST → returns immediately for read queries
+    └── publishes agent.run.requested → Kafka
+                                            ↓
+                                    FastAPI Agent Orchestrator
+                                    (runs LangGraph pipeline)
+                                            ↓ emits agent.run.completed
+                                    Spring Boot Analytics Service
+                                    (records usage · triggers billing cycle)
 ```
 
 ---
@@ -175,7 +224,7 @@ AWS Account
 │   ├── user-service pods   (Spring Boot)
 │   ├── billing-service pods
 │   ├── analytics-service pods
-│   ├── gateway pods        (Express JS)
+│   ├── gateway pods        (NestJS)
 │   └── dashboard pods      (React, served via Nginx)
 ├── RDS PostgreSQL          (Multi-AZ, automated backups)
 ├── ElastiCache Redis       (cluster mode)
@@ -203,8 +252,8 @@ AWS Account
 | 06 · Next JS | 501–600 | 22 Jan – 30 Apr 2028 | App Router · server components · server actions · Vercel |
 | 07 · React Native | 601–700 | 1 May – 8 Aug 2028 | Expo · React Navigation · Reanimated · EAS |
 | 08 · Express JS | 701–800 | 9 Aug – 16 Nov 2028 | middleware · JWT auth · Prisma ORM · WebSockets |
-| 09 · NestJS | 801–900 | 17 Nov 2028 – 24 Feb 2029 | modules · controllers · guards · interceptors · GraphQL · Kafka transport · CQRS |
-| 10 · Databases | 901–1000 | 25 Feb – 4 Jun 2029 | PostgreSQL · MySQL · MongoDB · Redis · pgvector |
+| 09 · Databases | 801–900 | 17 Nov 2028 – 24 Feb 2029 | PostgreSQL · MySQL · MongoDB · Redis · pgvector |
+| 10 · NestJS | 901–1000 | 25 Feb – 4 Jun 2029 | modules · controllers · guards · interceptors · GraphQL · Kafka transport · CQRS |
 | 11 · J2SE | 1001–1100 | 5 Jun – 12 Sep 2029 | Core Java · OOP · collections · streams · Java 17 |
 | 12 · Spring Boot | 1101–1200 | 13 Sep – 21 Dec 2029 | Spring Data JPA · Hibernate · Spring Security · Cloud |
 | 13 · Kafka | 1201–1300 | 22 Dec 2029 – 31 Mar 2030 | topics · partitions · consumer groups · Spring Kafka |
