@@ -22,7 +22,7 @@ nexusai/
 │   ├── 06-next-js/              (Days 501–600  · 22 Jan 2028 – 30 Apr 2028)
 │   ├── 07-react-native/         (Days 601–700  · 1 May 2028 – 8 Aug 2028)
 │   ├── 08-express-js/           (Days 701–800  · 9 Aug 2028 – 16 Nov 2028)
-│   ├── 09-playwright/           (Days 801–900  · 17 Nov 2028 – 24 Feb 2029)
+│   ├── 09-nestjs/               (Days 801–900  · 17 Nov 2028 – 24 Feb 2029)
 │   ├── 10-databases/            (Days 901–1000 · 25 Feb 2029 – 4 Jun 2029)
 │   ├── 11-j2se/                 (Days 1001–1100 · 5 Jun 2029 – 12 Sep 2029)
 │   ├── 12-spring-boot/          (Days 1101–1200 · 13 Sep 2029 – 21 Dec 2029)
@@ -138,7 +138,7 @@ Each skill block adds one production layer to `project/`. Nothing sits idle.
 | **06 · Next JS** | Days 501–600 · Jan–Apr 2028 | `marketing/` — Next.js landing page + MDX docs |
 | **07 · React Native** | Days 601–700 · May–Aug 2028 | `mobile/` — React Native iOS + Android app |
 | **08 · Express JS** | Days 701–800 · Aug–Nov 2028 | `gateway/` — Express API gateway, rate limiting, webhooks |
-| **09 · Playwright** | Days 801–900 · Nov 2028 – Feb 2029 | E2E tests across `dashboard/`, `marketing/`, `gateway/` — CI green gate |
+| **09 · NestJS** | Days 801–900 · Nov 2028 – Feb 2029 | `gateway/` migrated to NestJS — guards, interceptors, GraphQL API layer, Kafka transport wired to agent-api, CQRS read models |
 | **10 · Databases** | Days 901–1000 · Feb–Jun 2029 | `db/` — migrations, indexes, pgvector embeddings, Redis queues, MongoDB schemas |
 | **11 · J2SE** | Days 1001–1100 · Jun–Sep 2029 | Java fundamentals applied to `java-backend/` foundations |
 | **12 · Spring Boot** | Days 1101–1200 · Sep–Dec 2029 | `java-backend/` — Spring Boot billing, user management, subscriptions |
@@ -203,7 +203,7 @@ AWS Account
 | 06 · Next JS | 501–600 | 22 Jan – 30 Apr 2028 | App Router · server components · server actions · Vercel |
 | 07 · React Native | 601–700 | 1 May – 8 Aug 2028 | Expo · React Navigation · Reanimated · EAS |
 | 08 · Express JS | 701–800 | 9 Aug – 16 Nov 2028 | middleware · JWT auth · Prisma ORM · WebSockets |
-| 09 · Playwright | 801–900 | 17 Nov 2028 – 24 Feb 2029 | E2E tests · page object model · API mocking · CI |
+| 09 · NestJS | 801–900 | 17 Nov 2028 – 24 Feb 2029 | modules · controllers · guards · interceptors · GraphQL · Kafka transport · CQRS |
 | 10 · Databases | 901–1000 | 25 Feb – 4 Jun 2029 | PostgreSQL · MySQL · MongoDB · Redis · pgvector |
 | 11 · J2SE | 1001–1100 | 5 Jun – 12 Sep 2029 | Core Java · OOP · collections · streams · Java 17 |
 | 12 · Spring Boot | 1101–1200 | 13 Sep – 21 Dec 2029 | Spring Data JPA · Hibernate · Spring Security · Cloud |
