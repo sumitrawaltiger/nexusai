@@ -14,7 +14,7 @@ This repo has **two completely separate sections** that never mix:
 nexusai/
 │
 ├── practice/                    ← SECTION 1: Skill practice workspace
-│   ├── 01-python-fastapi/       (Days   1–100  · 9 Sep 2026 – 17 Dec 2026)
+│   ├── 01-python/       (Days   1–100  · 9 Sep 2026 – 17 Dec 2026)
 │   ├── 02-agentic-ai/           (Days 101–200  · 18 Dec 2026 – 27 Mar 2027)
 │   ├── 03-javascript/           (Days 201–300  · 28 Mar 2027 – 5 Jul 2027)
 │   ├── 04-typescript/           (Days 301–400  · 6 Jul 2027 – 13 Oct 2027)
@@ -63,7 +63,7 @@ nexusai/
 Each skill folder contains day-by-day work files, e.g.:
 
 ```
-practice/01-python-fastapi/
+practice/01-python/
 ├── day001-python-syntax.py
 ├── day010-oop-classes.py
 ├── day050-fastapi-basics.py
@@ -130,7 +130,7 @@ Each skill block adds one production layer to `project/`. Nothing sits idle.
 
 | Skill | Period | What gets added to `project/` |
 |---|---|---|
-| **01 · Python + FastAPI** | Days 1–100 · Sep–Dec 2026 | `agent-api/` — FastAPI REST + WebSocket execution API |
+| **01 · Python** | Days 1–100 · Sep–Dec 2026 | `agent-api/` — FastAPI REST + WebSocket execution API |
 | **02 · Agentic AI** | Days 101–200 · Dec 2026 – Mar 2027 | `agents/` — LangGraph multi-agent pipelines, RAG, MCP tool calling, CrewAI crews · NexusAI v1 |
 | **03 · JavaScript** | Days 201–300 · Mar–Jul 2027 | JS fundamentals applied to `dashboard/` utilities and `sdk/` helpers |
 | **04 · TypeScript** | Days 301–400 · Jul–Oct 2027 | `sdk/` — typed npm package + CLI fully in TypeScript |
@@ -195,7 +195,7 @@ AWS Account
 
 | Skill | Days | Period | Technologies |
 |---|---|---|---|
-| 01 · Python + FastAPI | 1–100 | 9 Sep – 17 Dec 2026 | Python · FastAPI · OOP · async · REST APIs |
+| 01 · Python | 1–100 | 9 Sep – 17 Dec 2026 | Python · FastAPI · OOP · async · REST APIs |
 | 02 · Agentic AI | 101–200 | 18 Dec 2026 – 27 Mar 2027 | LangChain · LangGraph · RAG · MCP · CrewAI · n8n |
 | 03 · JavaScript | 201–300 | 28 Mar – 5 Jul 2027 | DOM · async/await · closures · ES6+ · event loop |
 | 04 · TypeScript | 301–400 | 6 Jul – 13 Oct 2027 | types · interfaces · generics · enums · decorators |
