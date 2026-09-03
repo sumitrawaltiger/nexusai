@@ -1,0 +1,14 @@
+d={'A':2,'B':3}
+d1={}
+d['A']=100
+d['B']=200
+d['A']=400
+print(d)
+print(d.get('A'))
+print(d.get('Z'))
+print(d.get('k','defaulValue'))
+d={}
+d['A']=1
+d['B']=2
+d['A']=d.get('A',0)+1
+print(d)
