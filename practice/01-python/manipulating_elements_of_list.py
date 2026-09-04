@@ -1,0 +1,9 @@
+l1=[10,20,30]
+l2=[40,50]
+l1.append(l2)
+print(l1)
+print(len(l1))
+l=[10,20,30]
+l.extend('ABC')
+print(l)
+print(len(l))
