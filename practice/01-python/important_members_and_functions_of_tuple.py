@@ -1,0 +1,6 @@
+t=(10,20,30,40)
+print(len(t))
+print(t.count(10))
+print(t.count(7))
+print(t.index(10))
+print(t.index(40))
