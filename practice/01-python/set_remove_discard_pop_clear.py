@@ -1,0 +1,13 @@
+s={10,20,30,40}
+s.remove(20)
+print(s)
+s.pop()
+print(s)
+s.discard(30)
+print(s)
+s.clear()
+print(s)
+s.discard(50)
+print(s)
+#s.pop()
+#print(s)

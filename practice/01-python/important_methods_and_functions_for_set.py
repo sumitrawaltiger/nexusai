@@ -1,0 +1,14 @@
+s={10,20,30,40}
+print(len(s))
+s.add(50)
+print(s)
+s.update([60,70,80])
+print(s)
+s.update([90,100])
+print(s)
+s={10,20}
+l=[30,40]
+s.update(l)
+print(s)
+s.update(range(1,6),'durga')
+print(s)

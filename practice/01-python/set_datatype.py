@@ -1,0 +1,17 @@
+s={}
+print(type(s))
+s=set()
+s.add(10)
+s.add("z")
+s.add('A')
+s.add(20)
+#print(s[1:3])
+l=[10,20,30,40]
+s=set(l)
+print(s)
+s=set(range(0,101,10))
+print(s)
+s=set('apple')
+print(s)
+s=eval(input("Enter set of values"))
+print(s)
